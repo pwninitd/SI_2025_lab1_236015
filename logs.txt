@@ -1,0 +1,19 @@
+*   e3951ee Merge branch '5-filter-tasks-by-category'
+|\  
+| * 0b4bcf7 Add filter tasks by category
+* |   7c9d159 Merge pull request #12 from pwninitd/7-count-tasks-per-category
+|\ \  
+| * \   f9a1391 Merge branch 'master' into 7-count-tasks-per-category
+| |\ \  
+| |/ /  
+|/| |   
+* | |   83a5029 Merge pull request #10 from pwninitd/1-remove-a-task-by-name
+|\ \ \  
+| |_|/  
+|/| |   
+| * | cb23bcc Add remove a task by name
+|/ /  
+| * 4edb422 Add count tasks per category
+|/  
+* b81f1e6 Add starter code
+* f0beaa9 Initial commit
