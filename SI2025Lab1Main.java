@@ -101,8 +101,16 @@ class TaskManager {
 
     // 7. Count tasks per category
     public Map<String, Integer> countTasksPerCategory() {
-        // TODO: Implement counting logic
-        return new HashMap<>();
+        HashMap<String, Integer> table = new HashMap<String, Integer>();
+        for(Task task : tasks){
+            if(!table.containsKey(task.getCategory())){
+                table.put(task.getCategory(), 0);
+            }
+
+            table.put(task.getCategory(), table.get(task.getCategory())+1);
+        }
+
+        return table;
     }
 
     // 8. Mark a task as completed by name
@@ -124,6 +132,12 @@ public class SI2025Lab1Main {
         manager.addTask("Buy groceries", Priority.LOW, "Personal");
 
         // MISSING: Calls to the new methods that will be implemented
+        Map<String, Integer> table =manager.countTasksPerCategory();
+        for( String key : table.keySet()){
+            System.out.print(key + " : " + table.get(key));
+            System.out.println();
+        }
+      
         manager.removeTask("Submit assignment");
         manager.printTasks();
     }
