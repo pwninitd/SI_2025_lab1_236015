@@ -64,7 +64,11 @@ class TaskManager {
 
     // 1. Remove a task by name
     public void removeTask(String name) {
-        // TODO: Implement removal logic
+        for (Task task: tasks){
+            if (task.getName().equals(name)){
+                tasks.remove(task);
+            }
+        }
     }
 
     // 2. Find all completed tasks
@@ -133,6 +137,8 @@ public class SI2025Lab1Main {
             System.out.print(key + " : " + table.get(key));
             System.out.println();
         }
+      
+        manager.removeTask("Submit assignment");
         manager.printTasks();
     }
 }
